@@ -9,10 +9,10 @@ function App() {
     const [input, setInput] = useState("");
     const isMount = useRef(false);
 
-    // useEffect(() => {
-    //     console.log(`count: ${count} / input: ${input}`);
-    // }, [count, input]);
-    // //dependency array
+    useEffect(() => {
+        console.log(`count: ${count} / input: ${input}`);
+    }, [count, input]);
+    //dependency array
 
     //Life Cycle mount -> depn이 비어있으면 처음에만 실행
     useEffect(() => {
@@ -27,8 +27,6 @@ function App() {
         }
         console.log("update");
     });
-
-    //Life Cycle unmount -> depn이 비어있으면 처음 mount일때만 실행
 
     const pressButton = (value) => {
         setCount(count + value);

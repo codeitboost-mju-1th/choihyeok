@@ -9,7 +9,7 @@ function Even() {
         };
     }, []);
 
-    return <div>짝수 입니다.</div>;
+    return <div>짝수 입니다</div>;
 }
 
 export default Even;
